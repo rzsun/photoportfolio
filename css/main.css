@@ -6,11 +6,11 @@
 }
 
 .mynav {
-    margin-top: 10px;
+    margin-top:10px;
 }
 
 #mygallery{
-    margin-bottom: 60px;
+    margin-bottom:60px;
     margin:0 auto;
 }
 
@@ -19,11 +19,11 @@ body {
 }
 
 ul.bjqs-controls li{
-    display: inline;
+    display:inline;
 }
 
 ul.bjqs-controls li a{
-    text-decoration: none;
+    text-decoration:none;
 }
 
 ul.bjqs-controls li.bjqs-next a{float:right; margin-top: 5px;}
@@ -31,9 +31,13 @@ ul.bjqs-controls li.bjqs-prev a{float:left; margin-top: 5px;}
 
 ol.bjqs-markers li a{
     padding:5px 10px;
-    text-decoration: none;
+    text-decoration:none;
 }
 
 ol.bjqs-markers li.active-marker a{
-    text-decoration: underline;
+    text-decoration:underline;
+}
+li.bjqs-slide img {
+    display:block;
+    margin:auto;
 }

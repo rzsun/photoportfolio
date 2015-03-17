@@ -1,7 +1,7 @@
 /* Basic jQuery Slider essential styles */
 
 ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
-li.bjqs-slide{position:absolute; display:none; margin: 0 auto;}
+li.bjqs-slide{position:absolute; display:none; margin: auto;}
 ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
 ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
 ol.bjqs-markers.h-centered{text-align: center;}
