@@ -1,3 +1,6 @@
 .DS_Store
 *~
 /nbproject*
+Gruntfile.js
+/node_modules*
+tidy.css
