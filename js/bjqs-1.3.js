@@ -183,17 +183,12 @@
                 // initial setup
                 $slides.css({
                     'height'        : settings.height,
-                    'width'         : settings.width
+                    'width'         : '100%'
                 });
-                
-                $slides.children('img').each(function() {
-                    //console.log(this);
-                    $(this).css({
-                        'height': 'auto',
-                        'width': settings.width
-                    });
+                $slides.children('img').css({
+                    'height'        : settings.height,
+                    'width'         : '100%'
                 });
-                
                 $slider.css({
                     'height'        : settings.height,
                     'width'         : '100%'
@@ -207,12 +202,10 @@
                 if(responsive.width < settings.width){
 
                     $slides.css({
-                        'height'        : responsive.height,
-                        'width'         : settings.width
+                        'height'        : responsive.height
                     });
                     $slides.children('img').css({
-                        'height'        : responsive.height,
-                        'width'         : 'auto'
+                        'height'        : responsive.height
                     });
                     $slider.css({
                         'height'        : responsive.height
@@ -222,7 +215,7 @@
                     });
 
                 }
-                /*
+
                 $(window).resize(function() {
 
                     // calculate and update dimensions
@@ -244,7 +237,7 @@
                     });
 
                 });
-                */
+
             }
 
             if(settings.animtype === 'slide'){
@@ -256,7 +249,7 @@
                 });
                 $slides.children('img').css({
                     'height'        : settings.height,
-                    'width'         : 'auto'//settings.width
+                    'width'         : settings.width
                 });
                 $slider.css({
                     'height'        : settings.height,
@@ -284,7 +277,7 @@
                     });
 
                 }
-                
+
                 $(window).resize(function() {
 
                     // calculate and update dimensions
@@ -298,7 +291,7 @@
                     });
                     $slides.children('img').css({
                         'height'        : responsive.height,
-                        'width'         : 'auto'//responsive.width
+                        'width'         : responsive.width
                     });
                     $slider.css({
                         'height'        : responsive.height,
@@ -342,7 +335,7 @@
         var conf_static = function() {
 
             $slides.css({
-                'height'    : 'auto',//settings.height,
+                'height'    : settings.height,
                 'width'     : settings.width
             });
             $slider.css({
@@ -644,23 +637,6 @@
                         $m_markers.removeClass('active-marker');
                         $m_markers.eq(state.nextindex).addClass('active-marker');
                     }
-                    
-                    $slides.eq(state.nextindex).ready(function() {
-                        $slides.eq(state.nextindex).children('img').each(function() {
-                            console.log(this);
-                            $(this).css({
-                                'height': 'auto',
-                                'width': settings.width
-                            });
-                            if ($(this).get(0).naturalHeight * 3
-                                    > $(this).get(0).naturalWidth * 2) {
-                                $(this).css({
-                                    'height': settings.height,
-                                    'width': 'auto'
-                                });
-                            }
-                        });
-                    });
 
                     // fade out current
                     $slides.eq(state.currentindex).fadeOut(settings.animduration);
