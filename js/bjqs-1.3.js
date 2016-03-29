@@ -119,14 +119,14 @@
                     conf_random();
                 }
 
-                // create and show controls
-                if( settings.showcontrols ){
-                    conf_controls();
-                }
-
                 // create and show markers
                 if( settings.showmarkers ){
                     conf_markers();
+                }
+
+                // create and show controls
+                if( settings.showcontrols ){
+                    conf_controls();
                 }
 
                 // enable slidenumboard navigation
@@ -444,7 +444,7 @@
             // put 'em all together
             $c_prev.appendTo($c_wrapper);
             $c_fwd.appendTo($c_wrapper);
-            $c_wrapper.appendTo($wrapper);
+            $c_wrapper.prependTo($wrapper);
 
             // vertically center the controls
             if (settings.centercontrols) {
@@ -497,7 +497,7 @@
 
             });
 
-            $m_wrapper.appendTo($wrapper);
+            $m_wrapper.prependTo($wrapper);
             $m_markers = $m_wrapper.find('li');
 
             // center the markers
